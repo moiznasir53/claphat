@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="left-container">
+            <h1>Claphat</h1>
+            <h3>Welcome to the Claphat Sign Up Page</h3>
+            <p>Please fill out the form below to create an account.</p>
+        </div>
+        <form 
+            name="signup" 
+            method="POST" 
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="thanks.html"
+            >
+            <!-- Required hidden input -->
+            <input type="hidden" name="form-name" value="signup">
+            <!-- Honeypot (spam protection) -->
+            <p style="display:none;">
+                <label>
+                Don’t fill this out if you're human:
+                <input name="bot-field">
+                </label>
+            </p>
+            <div class="right-container">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Sign Up</button>
+            </div>
+    </body>
+</html>
